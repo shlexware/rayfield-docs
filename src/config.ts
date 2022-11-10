@@ -30,7 +30,7 @@ export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
 export const COMMUNITY_INVITE_URL = `https://discord.gg/sirius`;
 
-export const GITHUB_EDIT_URL = `https://github.com/shlexware/Rayfield/blob/main/Documentation.md`;
+export const GITHUB_EDIT_URL = `https://github.com/DarthGigi/rayfield-docs/tree/master`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
