@@ -10,5 +10,5 @@ export default defineConfig({
     // Enable React for the Algolia search component.
     react(),
   ],
-  site: `https://rayfield-docs.vercel.app/en/introduction`,
+  site: `https://rayfield-docs.vercel.app/`,
 });
