@@ -1,3 +1,8 @@
+/* hide scrollbar when not scrolling on windows*/
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -132,5 +132,57 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
       </aside>
     </main>
     <Footer path={currentFile} />
+
+    <style is:global>
+      .astro-code .code-copy {
+        position: sticky;
+        top: 0;
+        left: 100%;
+        margin-right: -100%;
+        margin-bottom: -30px;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in-out;
+        background-color: transparent;
+      }
+      .astro-code:hover .code-copy {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      function handleCopyClick(e: MouseEvent) {
+        const target = e.target as HTMLButtonElement & {
+          _timerId: NodeJS.Timeout;
+        };
+        let copyText = target.closest("pre")?.querySelector("code")?.innerText;
+
+        if (!copyText) return;
+
+        navigator.clipboard.writeText(copyText);
+        target.classList.add("copied");
+        target.innerText = "✅";
+
+        if (target._timerId) {
+          clearTimeout(target._timerId);
+        }
+        target._timerId = setTimeout(() => {
+          target.innerText = "📋";
+          target.classList.remove("copied");
+        }, 2000);
+      }
+
+      const codeBlocks = document.querySelectorAll("pre.astro-code");
+
+      codeBlocks.forEach((div) => {
+        // create the copy button
+        const copy = document.createElement("button");
+        copy.innerHTML = "📋";
+        copy.classList.add("code-copy");
+        // add the event listener to each click
+        copy.addEventListener("click", handleCopyClick);
+        // prepend the copy button to each code block
+        div.prepend(copy);
+      });
+    </script>
   </body>
 </html>
