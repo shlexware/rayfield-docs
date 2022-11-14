@@ -15,7 +15,7 @@ Last updated for the Beta 7R release
 - ⚖️ **Reliable and Stable**
 - 🆕 **Frequently Updated**
 - 🔓 **Open Sourced**
-- ⚙️ **Advanded features like**
+- ⚙️ **Advanced features like**
 
   - 🔑 **Key System**
   - 🔗 **Discord Auto Joins**
