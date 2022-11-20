@@ -7,9 +7,7 @@ layout: ../../layouts/MainLayout.astro
 ## Creating a Window
 
 ```lua
-local Window =
-Rayfield:CreateWindow(
-{
+local Window = Rayfield:CreateWindow({
    Name = "Rayfield Example Window",
    LoadingTitle = "Rayfield Interface Suite",
    LoadingSubtitle = "by Sirius",
@@ -33,8 +31,7 @@ Rayfield:CreateWindow(
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = "Hello"
    }
-}
-)
+})
 ```
 
 ## Creating a Tab
