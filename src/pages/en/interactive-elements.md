@@ -62,7 +62,7 @@ Toggle:Set(false)
 
 ## Creating a Color Picker
 
-```md
+```lua
 local ColorPicker = Tab:CreateColorPicker({
     Name = "Color Picker",
     Color = Color3.fromRGB(255,255,255),
