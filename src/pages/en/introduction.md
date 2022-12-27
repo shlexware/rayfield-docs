@@ -4,7 +4,7 @@ description: The official Rayfield UI Suite documentation
 layout: ../../layouts/MainLayout.astro
 ---
 
-[![rayfield](https://repository-images.githubusercontent.com/523426687/6344da12-e8f8-4051-ba76-45fd4f23d18e)](https://discord.gg/sirius)
+[![image](https://user-images.githubusercontent.com/77512805/209696209-dc87560f-8e55-407e-a5df-31ec31381c51.png)](https://discord.gg/sirius)
 
 This is the written documentation for Rayfield Interface Suite.
 
