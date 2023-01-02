@@ -6,8 +6,8 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: "https://repository-images.githubusercontent.com/523426687/6344da12-e8f8-4051-ba76-45fd4f23d18e?raw=true",
-    alt: "sirius rayfield logo on an outer space render of earth",
+    src: "https://rayfield.dev/default-og-image.png",
+    alt: "Sirius Rayfield logo in front of a beautiful picture of a lake in snowy mountains.",
   },
   twitter: "@sirius.software",
 };
