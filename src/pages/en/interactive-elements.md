@@ -73,6 +73,7 @@ local ColorPicker = Tab:CreateColorPicker({
     end
 })
 ```
+
 ### Updating a Color Picker
 
 ```lua
