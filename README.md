@@ -1,4 +1,4 @@
-[![rayfield](https://repository-images.githubusercontent.com/523426687/6344da12-e8f8-4051-ba76-45fd4f23d18e)](https://discord.gg/sirius)
+[![image](https://user-images.githubusercontent.com/77512805/209696209-dc87560f-8e55-407e-a5df-31ec31381c51.png)](https://discord.gg/sirius)
 
 This is the written documentation for Rayfield Interface Suite.
 
@@ -9,7 +9,7 @@ Last updated for the Beta 7R release
 - ⚖️ **Reliable and Stable**
 - 🆕 **Frequently Updated**
 - 🔓 **Open Sourced**
-- ⚙️ **Advanded features like**
+- ⚙️ **Advanced features like**
 
   - 🔑 **Key System**
   - 🔗 **Discord Auto Joins**
