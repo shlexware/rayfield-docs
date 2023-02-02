@@ -26,9 +26,6 @@
   transition-duration: 0.2s;
   transition-property: border-color, color;
   -webkit-font-smoothing: antialiased;
-
-  /* Invisible for now */
-  visibility: hidden;
 }
 .search-input:hover,
 .search-input:focus {

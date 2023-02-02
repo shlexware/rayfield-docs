@@ -34,12 +34,12 @@ export const GITHUB_EDIT_URL = `https://github.com/DarthGigi/rayfield-docs/tree/
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-  indexName: "XXXXXXXXXX",
-  appId: "XXXXXXXXXX",
-  apiKey: "XXXXXXXXXX",
+  indexName: "rayfield",
+  appId: "Y1DPKMTCPW",
+  apiKey: "23dce9cc88cb86b13abd821958b35469",
 };
 
-export type Sidebar = Record<typeof KNOWN_LANGUAGE_CODES[number], Record<string, { text: string; link: string }[]>>;
+export type Sidebar = Record<(typeof KNOWN_LANGUAGE_CODES)[number], Record<string, { text: string; link: string }[]>>;
 export const SIDEBAR: Sidebar = {
   en: {
     Configuration: [
