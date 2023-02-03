@@ -6,6 +6,9 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [
     // Enable Preact to support Preact JSX components.
@@ -13,6 +16,7 @@ export default defineConfig({
     // Enable React for the Algolia search component.
     react(),
     sitemap(),
+    robotsTxt(),
   ],
   site: `https://rayfield.dev/`,
 });
