@@ -10,6 +10,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
+  site: `https://rayfield.dev/`,
   integrations: [
     // Enable Preact to support Preact JSX components.
     preact(),
@@ -18,5 +19,4 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
   ],
-  site: `https://rayfield.dev/`,
 });
