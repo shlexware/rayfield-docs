@@ -1,7 +1,7 @@
 ---
 title: Textual elements in Rayfield
 description: Creating textual elements in Rayfield
-layout: ../../layouts/MainLayout.astro
+layout: ../layouts/MainLayout.astro
 ---
 
 ## Creating a Label

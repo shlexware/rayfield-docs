@@ -1,7 +1,7 @@
 ---
 title: Adding interactive elements
 description: Adding interactive elements to your Rayfield window
-layout: ../../layouts/MainLayout.astro
+layout: ../layouts/MainLayout.astro
 ---
 
 ## Notifying the user

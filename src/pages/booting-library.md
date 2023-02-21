@@ -1,7 +1,7 @@
 ---
 title: Loading the Rayfield Library
 description: Booting the Rayfield Library
-layout: ../../layouts/MainLayout.astro
+layout: ../layouts/MainLayout.astro
 ---
 
 ## Booting the Library

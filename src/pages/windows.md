@@ -1,7 +1,7 @@
 ---
 title: Windows in Rayfield
 description: Creating a Window in Rayfield
-layout: ../../layouts/MainLayout.astro
+layout: ../layouts/MainLayout.astro
 ---
 
 ## Creating a Window

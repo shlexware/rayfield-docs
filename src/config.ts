@@ -23,11 +23,6 @@ export type Frontmatter = {
   lang?: string;
 };
 
-export const KNOWN_LANGUAGES = {
-  English: "en",
-} as const;
-export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
-
 export const COMMUNITY_INVITE_URL = `https://discord.gg/sirius`;
 
 export const GITHUB_EDIT_URL = `https://github.com/SiriusDevelopmentGroup/rayfield-docs/tree/master`;
@@ -39,19 +34,17 @@ export const ALGOLIA = {
   apiKey: "23dce9cc88cb86b13abd821958b35469",
 };
 
-export type Sidebar = Record<(typeof KNOWN_LANGUAGE_CODES)[number], Record<string, { text: string; link: string }[]>>;
+export type Sidebar = Record<string, { text: string; link: string }[]>;
 export const SIDEBAR: Sidebar = {
-  en: {
-    Configuration: [
-      { text: "Introduction", link: "en/introduction" },
-      { text: "Booting the Library", link: "en/booting-library" },
-      { text: "Windows", link: "en/windows" },
-    ],
-    Interaction: [
-      { text: "Elements", link: "en/interactive-elements" },
-      { text: "Binds", link: "en/keybinds" },
-    ],
+  Configuration: [
+    { text: "Introduction", link: "introduction" },
+    { text: "Booting the Library", link: "booting-library" },
+    { text: "Windows", link: "windows" },
+  ],
+  Interaction: [
+    { text: "Elements", link: "interactive-elements" },
+    { text: "Binds", link: "keybinds" },
+  ],
 
-    "UI Components": [{ text: "Textual Elements", link: "en/text" }],
-  },
+  "UI Components": [{ text: "Textual Elements", link: "text" }],
 };

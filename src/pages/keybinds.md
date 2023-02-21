@@ -1,7 +1,7 @@
 ---
 title: Binding keys in Rayfield
 description: Creating a Keybind in Rayfield
-layout: ../../layouts/MainLayout.astro
+layout: ../layouts/MainLayout.astro
 ---
 
 ## Creating a Keybind
