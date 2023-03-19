@@ -1,3 +1,7 @@
+---
+import "../styles/theme.css";
+---
+
 <!-- only head stuff for embeds --><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,6 +12,15 @@
     <meta content="#2B2D31" name="theme-color" />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script is:inline>
+      const root = document.documentElement;
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        root.classList.add("theme-dark");
+      } else {
+        root.classList.remove("theme-dark");
+      }
+    </script>
 
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="Rayfield Documentation" />
