@@ -7,14 +7,12 @@
     <meta name="generator" content={Astro.generator} />
     <meta content="#2B2D31" name="theme-color" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="Rayfield Documentation" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rayfield.dev/introduction" />
+    <meta property="og:url" content="https://rayfield.dev/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://rayfield.dev/default-og-image.png" />
     <meta property="og:image:alt" content="Sirius Rayfield logo in front of a beautiful picture of a lake in snowy mountains." />
@@ -28,12 +26,26 @@
     <meta name="twitter:description" content="The official Rayfield UI Suite documentation." />
     <meta name="twitter:image" content="https://rayfield.dev/default-og-image.png" />
     <meta name="twitter:image:alt" content="Sirius Rayfield logo in front of a beautiful picture of a lake in snowy mountains." />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png?v=2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png?v=2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png?v=2" />
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest?v=2" />
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg?v=2" color="#000000" />
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico?v=2" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml?v=2" />
+    <meta name="theme-color" content="#000000" />
   </head>
   <body>
     <script>
       // Redirect your homepage to the first page of documentation.
       // If you have a landing page, remove this script and add it here!
-      window.location.pathname = `/introduction`;
+      // If it's a crawler, dont redirect
+      if (window.location.pathname === "/" && !navigator.userAgent.includes("Googlebot")) {
+        window.location.href = "/introduction";
+      }
     </script>
   </body>
 </html>
