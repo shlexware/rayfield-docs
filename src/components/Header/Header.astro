@@ -1,7 +1,6 @@
 ---
 import * as CONFIG from "../../config";
 import Logo from "./Logo.astro";
-import SkipToContent from "./SkipToContent.astro";
 import SidebarToggle from "./SidebarToggle";
 import Search from "./Search";
 
@@ -12,135 +11,47 @@ type Props = {
 const { currentPage } = Astro.props as Props;
 ---
 
-<header>
-  <SkipToContent />
-  <nav class="nav-wrapper" title="Top Navigation">
-    <div class="menu-toggle">
-      <SidebarToggle client:idle />
-    </div>
-    <div class="logo flex">
-      <a href="/">
-        <Logo size={40} />
-        <h1>{CONFIG.SITE.title ?? "Documentation"}</h1>
+<nav id="nav" class="sticky top-0 left-0 z-50 h-14 w-full saturate-[180%] backdrop-blur-[20px]">
+  <style>
+    #nav {
+      background-color: rgba(29, 29, 30, 0.7);
+      -webkit-transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+      transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+      -webkit-transition-property: background-color, -webkit-backdrop-filter;
+      transition-property: background-color, -webkit-backdrop-filter;
+      transition-property: background-color, backdrop-filter;
+      transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+    }
+  </style>
+  <div class="mx-auto flex h-full w-full max-w-screen-xl flex-wrap items-center justify-between px-6 sm:px-4">
+    <div class="flex">
+      <div class="md:hidden">
+        <SidebarToggle client:idle />
+      </div>
+      <a id="logo" href="/" class="items-left m-0 flex p-0 text-xl font-semibold text-white no-underline transition-opacity duration-500 ease-in-out hover:no-underline hover:opacity-50">
+        <span>Rayfield</span>
       </a>
     </div>
-    <div style="flex-grow: 1;"></div>
-    <div class="search-item">
+    <div class="hidden items-center gap-4 text-xs [line-height:1.33337] sm:flex lg:order-2">
+      <div class="flex items-center gap-1 duration-700 ease-in-out">
+        <a href="https://sirius.menu/" target="_blank" class="font-light text-white opacity-80 hover:text-[#147ce5] hover:opacity-100">Sirius</a>
+      </div>
+      <div class="hidden items-center gap-1 duration-700 ease-in-out sm:flex">
+        <a href="https://rayfield.dev/" target="_blank" class="font-light text-white opacity-80 hover:text-[#147ce5] hover:opacity-100"> Rayfield</a>
+      </div>
+      <div class="hidden items-center gap-1 duration-700 ease-in-out sm:flex">
+        <a href="https://discord.gg/sirius" target="_blank" class="font-light text-white opacity-80 hover:text-[#147ce5] hover:opacity-100"> Discord</a>
+      </div>
+    </div>
+    <div class="relative z-10 flex-shrink basis-40 md:flex-grow flex md:max-w-md">
       <Search client:idle />
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <style>
-  header {
-    z-index: 11;
-    height: var(--theme-navbar-height);
-    width: 100%;
-    background-color: var(--theme-navbar-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-  }
-
-  .logo {
-    flex: 1;
-    display: flex;
-    overflow: hidden;
-    width: 30px;
-    font-size: 2rem;
-    flex-shrink: 0;
-    font-weight: 600;
-    line-height: 1;
-    color: hsla(var(--color-base-white), 100%, 1);
-    gap: 1rem;
-    z-index: -1;
-  }
-
-  .logo a {
-    display: flex;
-    gap: 1rem;
-    padding: 0.5em 0.25em;
-    margin: -0.5em -0.25em;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .logo a {
-    transition: color 100ms ease-out;
-    color: var(--theme-text);
-  }
-
-  .logo a:hover,
-  .logo a:focus {
-    color: var(--theme-text-accent);
-  }
-
-  .logo h1 {
-    display: none;
-    font: inherit;
-    color: inherit;
-    margin: 0;
-  }
-
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1em;
-    width: 100%;
-    max-width: 82em;
-    padding: 0 1rem;
-  }
-
-  @media (min-width: 50em) {
-    header {
-      position: static;
-      padding: 2rem 0rem;
-    }
-
-    .logo {
-      width: auto;
-      margin: 0;
-      z-index: 0;
-    }
-
-    .logo h1 {
-      display: initial;
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-  }
-
-  /** Style Algolia */
-  :root {
+  /* :root {
     --docsearch-primary-color: var(--theme-accent);
     --docsearch-logo-color: var(--theme-text);
-  }
-
-  .search-item {
-    display: none;
-    position: relative;
-    z-index: 10;
-    flex-grow: 1;
-    padding-right: 0.7rem;
-    display: flex;
-    max-width: 200px;
-  }
-
-  @media (min-width: 50em) {
-    .search-item {
-      max-width: 400px;
-    }
-  }
-</style>
-
-<style is:global>
-  .search-item > * {
-    flex-grow: 1;
-  }
+  } */
 </style>
