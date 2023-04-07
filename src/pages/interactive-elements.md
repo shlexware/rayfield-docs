@@ -16,10 +16,10 @@ Rayfield:Notify({
       Ignore = {
          Name = "Okay!",
          Callback = function()
-         print("The user tapped Okay!")
-      end
+            print("The user tapped Okay!")
+         end
+      }
    },
-},
 })
 ```
 
@@ -91,8 +91,8 @@ local Slider = Tab:CreateSlider({
    CurrentValue = 10,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   -- The function that takes place when the slider changes
-   -- The variable (Value) is a number which correlates to the value the slider is currently at
+      -- The function that takes place when the slider changes
+      -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
 ```
@@ -111,8 +111,8 @@ local Input = Tab:CreateInput({
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
    Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
+      -- The function that takes place when the input is changed
+      -- The variable (Text) is a string for the value in the text box
    end,
 })
 ```
@@ -127,8 +127,8 @@ local Dropdown = Tab:CreateDropdown({
    MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
-   -- The function that takes place when the selected option is changed
-   -- The variable (Option) is a table of strings for the current selected options
+      -- The function that takes place when the selected option is changed
+      -- The variable (Option) is a table of strings for the current selected options
    end,
 })
 ```
@@ -141,5 +141,10 @@ Dropdown:Set({"Option 2"}) -- The new list of options
 
 ## Check the value of an existing element
 
-To check the current value of an existing element, using the variable, you can do `ElementName.CurrentValue`, if it's a keybind or dropdown, you will need to use `KeybindName.CurrentKeybind` or `DropdownName.CurrentOption`
+Checking the current value of an existing element, using the variable:
+
+- Keybinds — `Element.CurrentKeybind`
+- Dropdowns — `Element.CurrentOption`
+- Other — `Element.CurrentValue`
+
 You can also check it via the flags from `Rayfield.Flags`
