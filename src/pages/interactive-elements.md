@@ -123,11 +123,12 @@ local Input = Tab:CreateInput({
 local Dropdown = Tab:CreateDropdown({
    Name = "Dropdown Example",
    Options = {"Option 1","Option 2"},
-   CurrentOption = "Option 1",
+   CurrentOption = {"Option 1"},
+   MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
    -- The function that takes place when the selected option is changed
-   -- The variable (Option) is a string for the value that the dropdown was changed to
+   -- The variable (Option) is a table of strings for the current selected options
    end,
 })
 ```
